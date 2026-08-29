@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>📖 Đồ đệ của ta đều là đại phản phái</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- ======== NÚT TOGGLE ======== -->
+<button id="mainToggle" title="Mở công cụ">⚙️</button>
+
+<!-- ======== ĐIỀU KHIỂN AUTO (HÀNG DỌC BÊN TRÁI - LÀM MỜ) ======== -->
+<div id="autoControls">
+  <button id="autoToggleBtn" class="toggle-btn" title="Tắt Auto">⏹</button>
+  <span class="status-label" id="autoStatus">Chạy</span>
+  
+  <!-- Cụm chỉnh tốc độ Cuộn (Dành cho Webtoon) -->
+  <div id="scrollSpeedRow" class="speed-control">
+    <span class="row-label">Tốc</span>
+    <button id="speedScrollInc">+</button>
+    <span class="speed-display" id="speedScrollDisplay">10</span>
+    <button id="speedScrollDec">−</button>
+  </div>
+
+  <!-- Cụm chỉnh tốc độ Trang (Dành cho Single/Double) -->
+  <div id="pageSpeedRow" class="speed-control">
+    <span class="row-label">Tốc</span>
+    <button id="speedPageInc">+</button>
+    <span class="speed-display" id="speedPageDisplay">10</span>
+    <button id="speedPageDec">−</button>
+  </div>
+</div>
+
+<!-- ======== MENU CÔNG CỤ ======== -->
+<div id="radialMenu">
+  <div class="radial-item" id="radialAutoToggle"><span class="icon" id="autoMenuIcon">⏯</span><span class="label" id="autoMenuLabel">Auto</span></div>
+  <div class="radial-item" id="radialBrightUp"><span class="icon">🔆</span><span class="label">Sáng +</span></div>
+  <div class="radial-item" id="radialBrightDown"><span class="icon">🌙</span><span class="label">Sáng −</span></div>
+  <div class="radial-item" id="radialBookmark"><span class="icon">⭐</span><span class="label">Lưu</span></div>
+  <div class="radial-item" id="radialShowBookmarks"><span class="icon">📌</span><span class="label">Bookmark</span></div>
+  <div class="radial-item" id="radialChapterList"><span class="icon">📋</span><span class="label">Chương</span></div>
+  <div class="radial-item" id="radialModeToggle"><span class="icon" id="modeIcon">⬇</span><span class="label" id="modeLabel">Webtoon</span></div>
+</div>
+
+<!-- ======== TOOLBAR ======== -->
+<div id="toolbar">
+  <span class="title">
+    <span id="comicTitle">📚 Đồ đệ của ta đều là đại phản phái</span>
+    <button id="backButton">← Thoát</button>
+  </span>
+</div>
+
+<!-- ======== PANEL CHƯƠNG (trượt từ trái) ======== -->
+<div id="chapterPanel" class="side-panel left-panel">
+  <div class="panel-header">
+    <h2>📖 Danh sách chương</h2>
+    <button class="panel-close" id="closeChapterPanel">✕</button>
+  </div>
+  <div class="jump-box">
+    <input type="number" id="jumpInput" placeholder="Nhập số chương (vd: 5)" min="1">
+    <button id="jumpBtn">Đến</button>
+  </div>
+  <div class="panel-list" id="chapterPanelList"></div>
+</div>
+
+<!-- ======== PANEL BOOKMARK (trượt từ phải) ======== -->
+<div id="bookmarkPanel" class="side-panel right-panel">
+  <div class="panel-header">
+    <h2>📌 Bookmark đã lưu</h2>
+    <button class="panel-close" id="closeBookmarkPanel">✕</button>
+  </div>
+  <div class="panel-list" id="bookmarkPanelList"></div>
+</div>
+
+<!-- ======== PROGRESS BAR ======== -->
+<div id="progressBar"><div class="fill" id="progressFill"></div></div>
+
+<!-- ======== READER ======== -->
+<div id="reader"><div id="viewport" class="viewport webtoon">
+  
+</div></div>
+
+<!-- ======== NÚT CHUYỂN TRANG ======== -->
+<div class="nav-overlay left" id="navLeft"><span class="arrow">‹</span></div>
+<div class="nav-overlay right" id="navRight"><span class="arrow">›</span></div>
+
+<!-- ======== TOAST ======== -->
+<div id="toastContainer"></div>
+
+
+</body>
+</html>
