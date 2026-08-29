@@ -727,3 +727,6 @@ button:active { transform: scale(0.95); }
 
 /* Nav overlay thấp hơn để không che nút */
 .nav-overlay { z-index: 900; }   /* trước là 1500 hoặc 600 */
+.chapter-header.lab-pinned-child {
+    width:100%
+}
