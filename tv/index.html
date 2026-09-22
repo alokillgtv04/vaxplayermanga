@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>VAXPLAYER TV — IPTV Ultimate</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dashjs@4.7.4/dist/dash.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flv.js@1.6.2/dist/flv.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mpegts.js@1.7.3/dist/mpegts.js"></script>
+<!--
+<link rel="stylesheet" href="http://localhost:8158/style.css">
+-->
+<link rel="stylesheet" href="style.css?v=1.5">
+<script>
+  // Đổi URL này thành worker health của bạn
+  window.HEALTH_API_URL = 'https://healy.alokillgtv02.workers.dev';
+  window.HEALTH_TTL_MS = 12 * 60 * 60 * 1000;  // 12h
+</script>
+</head>
+<body>
+<video id="vax-video" playsinline webkit-playsinline preload="auto" crossorigin="anonymous"></video>
+<!--
+<script src="http://localhost:8158/app.js"></script>
+-->
+<script src="app.js?v=1.5"></script>
+</body>
+</html>
